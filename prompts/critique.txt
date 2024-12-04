@@ -1,0 +1,25 @@
+You are given an image, a question about the image, a reasoning process involving multiple steps, and a final answer. Evaluate the accuracy of each reasoning step and the final answer. For each reasoning step, evaluate whether it is correct or incorrect. If it is incorrect, briefly explain why. Then, evaluate the final answer as correct or incorrect.
+
+Your response should be a json in the following format:
+```json
+{
+  "step_{{{REPEAT_BY_N_STEP}}}": {"correctness": true or false, "explanation": "Write your explanation here"},
+  "answer_correctness": true or false
+}
+```
+
+---
+
+Instructions for evaluating reasoning steps:
+* For each reasoning step, evaluate whether it is correct or incorrect based on the accuracy of the factual information and logical calculations it contains.
+* Evaluate each step in isolation.
+* You do not need to evaluate the importance of the step in achieving the correct final answer; focus solely on the correctness within that step itself.
+
+---
+
+# Question: {{{QUESTION}}}
+
+# Reasoning:
+{{{REASONING}}}
+
+# Answer: {{{ANSWER}}}

@@ -1,0 +1,61 @@
+You task is to evaluate a **critique** of reasoning.
+
+You are given a question about an image, an incorrect chain-of-thought trying to answer the question, and a **critique** that explains why the {{{WHICH_STEP}}} step of the chain-of-thought is incorrect. You are required to focus on the {{{WHICH_STEP}}} step, and analyzes whether the critique correctly identifies the source of error.
+
+For reference, you will be provided with the ground truth critique for each individual step. Evaluate the critique by comparing against the ground truth. Focus on whether the critique accurately identifies the **core mistake**. If the critique addresses the core error and does not contain factual or logical error, minor deviations or omissions in reasoning or explanation should be considered as correct.
+
+Think step by step, then provide your judgment. Your response should end with either:
+
+# Judgment: the critique is correct.
+
+or
+
+# Judgment: the critique is incorrect.
+
+--- Example 1
+
+# Question: Question: 26
+Data values represented by the bar labeled "10" in the histogram below fall into which range?
+
+A. 7.5 up to 12.5
+B. 7.25 up to 12.75
+C. 8.5 up to 11.5
+D. 8.75 up to 11.75
+E. 8.75 up to 11.25
+
+# Chain-of-thought:
+1. The bar labeled '10' in the histogram corresponds to data values between 7.5 and 12.5.
+  - Ground truth critique: incorrect. 7.5 and 12.5 are not boundaries of the interval. The boundaries are midway between the bar labels: left boundary: (7.5 + 10)/2 = 8.75; right boundary: (10 + 12.5)/2 = 11.25.
+  - Critique to be evaluated: incorrect. The bar labeled '10' in the histogram actually corresponds to data values between 10.0 and 12.5. The question incorrectly stated that the range is from 7.5 to 12.5.
+
+# Evaluation:
+The core error is that step 2 incorrectly identifies the span as 7.5 - 12.5. Although the critique correctly identifies the core error, the critique contains a factual error that the span should be 10.0 - 12.5, while according to the ground truth critique, the span should be 8.75 - 11.25. Therefore, the critique is incorrect.
+
+# Judgment: the critique is incorrect.
+
+--- Example 2
+
+# Question: The small metallic object that is on the left side of the tiny rubber cylinder on the right side of the big shiny cylinder is what shape?
+
+# Chain-of-thought:
+1. First, identify the large shiny cylinder, which is the gold object in the foreground.
+  - Ground truth critique: correct.
+2. To its right is a tiny rubber cylinder, which is turquoise.
+  - Ground truth critique: correct.
+3. To the left of this turquoise cylinder is a small metallic object, which appears to be a sphere.
+  - Ground truth critique: incorrect. The small metallic object is a cube, not sphere.
+4. Therefore, the shape of the object is a sphere.
+  - Ground truth critique: incorrect. The pervious incorrect sentence leads to this incorrect sentence.
+  - Critique to be evaluated: incorrect. The shape of the object is a cube, not a sphere.
+
+# Evaluation:
+Based on the ground truth, the error of step 4 originates from step 3's error. Specifically, the error is that the small metallic object is a cube, not sphere. The critique correctly identifies the error comes from the object being a cube, which aligns with the ground truth critique.
+
+# Judgment: the critique is correct.
+
+---
+
+# Question: {{{QUESTION}}}
+
+# Chain-of-thought:
+{{{COT}}}

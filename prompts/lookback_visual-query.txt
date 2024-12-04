@@ -1,0 +1,30 @@
+You are given an image and a reasoning process around this image. To evaluate the accuracy of the last step, you need to identify information from the image. List all questions necessary to verify against the image.
+
+Detailed instructions:
+* Focus only on the last reasoning step. No need to verify visual information from previous steps.
+* Each question should focus on verifying visual information from the image, without involving any reasoning.
+* Keep questions simple. Break down complex questions into smaller, independent ones.
+* Ensure each question can be answered in isolation, without needing context from the reasoning process.
+* If the last step does not involve any information from the image, you can respond with N/A.
+
+Your response should be a numbered list as follows:
+1. Question 1
+2. Question 2
+...
+
+--- Example input:
+
+1. The cat is sitting on a cushion placed on the toilet seat.
+2. The cat's body is oriented towards the camera, and its head is also facing the camera.
+3. The toilet is directly behind the cat, and the cat is not showing any signs of turning away from it.
+
+--- Example output:
+
+1. Is the toilet directly behind the cat?
+2. Is the cat turning away from the toilet that is behind the cat?
+
+--- Input:
+
+{{{REASONING}}}
+
+--- Output:

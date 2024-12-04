@@ -1,0 +1,10 @@
+You are given an image, a question about the image, a multi-step reasoning process leading to an answer, and the critique for {{{CRITIQUE_SETTING}}}. Based on this information, think step by step and provide the correct answer. Your response should end with a json dictionary as follows:
+```json
+{"answer": ANSWER}
+```
+ANSWER should be {{{ANSWER_FORMAT}}}.
+
+# Question: {{{QUESTION}}}
+
+# Reasoning:
+{{{REASONING}}}
