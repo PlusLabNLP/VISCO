@@ -1,5 +1,6 @@
-anthropic==0.36.1
-google-generativeai==0.8.3
-openai==1.41.0
-Levenshtein==0.26.0
-word2number==1.1
+anthropic>=0.36.1
+google-generativeai>=0.8.3
+openai>=1.41.0
+Levenshtein>=0.26.0
+word2number>=1.1
+tabulate
