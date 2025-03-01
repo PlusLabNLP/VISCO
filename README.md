@@ -4,6 +4,8 @@
 
 [🌐 Project](https://visco-benchmark.github.io/) | [🤗 Dataset](https://huggingface.co/datasets/uclanlp/VISCO) | [📖 Paper](https://arxiv.org/abs/2412.02172)
 
+<h3>🎉Accepted to CVPR 2025!🎉</h3>
+
 <br/>
 
 Outline:
