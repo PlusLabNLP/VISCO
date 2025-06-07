@@ -133,13 +133,11 @@ python evaluate.py YOUR_OUTPUT_FILE --input test.jsonl --task correction
 Please cite our paper if this repository inspires your work!
 
 ```
-@misc{wu2024viscobenchmarkingfinegrainedcritique,
-      title={VISCO: Benchmarking Fine-Grained Critique and Correction Towards Self-Improvement in Visual Reasoning}, 
-      author={Xueqing Wu and Yuheng Ding and Bingxuan Li and Pan Lu and Da Yin and Kai-Wei Chang and Nanyun Peng},
-      year={2024},
-      eprint={2412.02172},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2412.02172}, 
+@inproceedings{wu2025visco,
+  title={Visco: Benchmarking fine-grained critique and correction towards self-improvement in visual reasoning},
+  author={Wu, Xueqing and Ding, Yuheng and Li, Bingxuan and Lu, Pan and Yin, Da and Chang, Kai-Wei and Peng, Nanyun},
+  booktitle={Proceedings of the Computer Vision and Pattern Recognition Conference},
+  pages={9527--9537},
+  year={2025}
 }
 ```
